@@ -1,2 +1,0 @@
-# labyrinthe
-weeeeeeeeeeessssh les gaaaaaaaaaaaaaars
