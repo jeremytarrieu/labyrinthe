@@ -13,7 +13,7 @@ public class Cellule {
     
     int tresor = 0; // correspond à l'un des 24 trésors, chaque trésor possède 1 numéro. (nombre à revoir) 0 = pas de tresor
     Joueur pionCourant ;
-    boolean deplacement = false;//true = c'est une case de déplacement possible (voir methode lienPossible ds Grille)
+    boolean deplacement = false;//true = c'est une case de déplacement possible (voir methode rechercheDeplcement Possibles ds Grille)
     boolean [] lien = new boolean [4]; /* tableau informant si la case possède un lien avec les cases alentoures
     lien[0] = lien avec la case en dessous
     lien[1] = lien avec la case de gauche

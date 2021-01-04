@@ -7,12 +7,79 @@ package labrinthe;
 
 public class Affichage extends javax.swing.JFrame {
 
-    Joueur JoueurCourant;
+    Joueur joueurCourant;
     Grille grilleJeu = new Grille(); // grille de 
-    Joueur[] scores = new Joueur[4]; // tableau des scores de la partie en cours
+    Joueur[] listeJoueurs = new Joueur[4]; // tableau des scores de la partie en cours
+    boolean tourDeJeu = false;/* boolean qui nous informe si le joeuur courant 
+    doit deplacer son pion ou faire glisser une rangée : 
+        - false : le joueur doit deplacer une rangée
+        - true : le joueur doit deplacer son pion
+     */
+    int nbJoueurs = 0;// nombre de joueurs
 
     public Affichage() {
         initComponents();
+        PJeu.setVisible(false);
+        
+        txtNomJ1.setVisible(false);
+        nomJoueur1.setVisible(false);
+        txtCouleurJ1.setVisible(false);
+        
+        txtNomJ2.setVisible(false);
+        nomJoueur2.setVisible(false);
+        txtCouleurJ2.setVisible(false);
+        
+        txtNomJ3.setVisible(false);
+        nomJoueur3.setVisible(false);
+        txtCouleurJ2.setVisible(false);
+        
+        txtNomJ4.setVisible(false);
+        nomJoueur4.setVisible(false);
+        txtCouleurJ4.setVisible(false);
+        
+        btnRougeJ1.setVisible(false);
+        btnRougeJ2.setVisible(false);
+        btnRougeJ3.setVisible(false);
+        btnRougeJ4.setVisible(false);
+        
+        btnJauneJ1.setVisible(false);
+        btnJauneJ2.setVisible(false);
+        btnJauneJ3.setVisible(false);
+        btnJauneJ4.setVisible(false);
+        
+        btnVertJ1.setVisible(false);
+        btnVertJ2.setVisible(false);
+        btnVertJ3.setVisible(false);
+        btnVertJ4.setVisible(false);
+        
+        btnBleuJ1.setVisible(false);
+        btnBleuJ2.setVisible(false);
+        btnBleuJ3.setVisible(false);
+        btnBleuJ4.setVisible(false);
+        
+        validerNomCouleur.setVisible(false);
+
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 7; j++) {
+
+                CelluleGraphique cellGraph = new CelluleGraphique(grilleJeu.cellule[i][j]);
+                cellGraph.addActionListener(new java.awt.event.ActionListener() { // l'écouteur du boutton 
+
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        if (tourDeJeu == false) {
+                            Cellule c = cellGraph.celluleAssociee;
+                            boolean verificationDeplacement = false;
+                            do {
+                                verificationDeplacement = deplacerJoueur(c); ///marche pas
+                            } while (verificationDeplacement == false);
+                        }
+                    }
+
+                }
+                );
+                PCellules.add(cellGraph);
+            }
+        }
 
     }
 
@@ -25,23 +92,1024 @@ public class Affichage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PMenuNbJoueurs = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jLabel2 = new javax.swing.JLabel();
+        nbJoueurs1 = new javax.swing.JButton();
+        nbJoueurs2 = new javax.swing.JButton();
+        nbJoueurs3 = new javax.swing.JButton();
+        nbJoueurs4 = new javax.swing.JButton();
+        validerNbJoueurs = new javax.swing.JButton();
+        txtNomJ1 = new javax.swing.JLabel();
+        nomJoueur1 = new javax.swing.JTextField();
+        txtNomJ2 = new javax.swing.JLabel();
+        nomJoueur2 = new javax.swing.JTextField();
+        txtNomJ3 = new javax.swing.JLabel();
+        nomJoueur3 = new javax.swing.JTextField();
+        txtNomJ4 = new javax.swing.JLabel();
+        nomJoueur4 = new javax.swing.JTextField();
+        btnRougeJ1 = new javax.swing.JButton();
+        btnRougeJ2 = new javax.swing.JButton();
+        btnRougeJ3 = new javax.swing.JButton();
+        btnRougeJ4 = new javax.swing.JButton();
+        btnJauneJ1 = new javax.swing.JButton();
+        btnJauneJ2 = new javax.swing.JButton();
+        btnJauneJ3 = new javax.swing.JButton();
+        btnJauneJ4 = new javax.swing.JButton();
+        btnVertJ1 = new javax.swing.JButton();
+        btnVertJ2 = new javax.swing.JButton();
+        btnVertJ3 = new javax.swing.JButton();
+        btnVertJ4 = new javax.swing.JButton();
+        btnBleuJ1 = new javax.swing.JButton();
+        btnBleuJ2 = new javax.swing.JButton();
+        btnBleuJ3 = new javax.swing.JButton();
+        btnBleuJ4 = new javax.swing.JButton();
+        validerNomCouleur = new javax.swing.JButton();
+        txtCouleurJ1 = new javax.swing.JLabel();
+        txtCouleurJ2 = new javax.swing.JLabel();
+        txtCouleurJ3 = new javax.swing.JLabel();
+        txtCouleurJ4 = new javax.swing.JLabel();
+        PJeu = new javax.swing.JPanel();
+        btnSlide1 = new javax.swing.JButton();
+        btnSlide2 = new javax.swing.JButton();
+        btnSlide3 = new javax.swing.JButton();
+        btnSlide4 = new javax.swing.JButton();
+        btnSlide5 = new javax.swing.JButton();
+        btnSlide6 = new javax.swing.JButton();
+        btnSlide7 = new javax.swing.JButton();
+        btnSlide8 = new javax.swing.JButton();
+        btnSlide9 = new javax.swing.JButton();
+        btnSlide10 = new javax.swing.JButton();
+        btnSlide11 = new javax.swing.JButton();
+        btnSlide12 = new javax.swing.JButton();
+        PCellules = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 800));
-        setMinimumSize(new java.awt.Dimension(800, 800));
+        setPreferredSize(new java.awt.Dimension(1200, 900));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1400, Short.MAX_VALUE)
+        PMenuNbJoueurs.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("LABYRINTHE DE FIN DE SOIRÉE");
+
+        jFormattedTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jFormattedTextField1.setBorder(null);
+        jFormattedTextField1.setForeground(new java.awt.Color(0, 0, 0));
+        jFormattedTextField1.setText("Vous rentrez de soirée accompagné ou non, et vous devez retrouver certains objets afin de passer un meilleur moment possible... ;)");
+        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField1ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Choisissez un nombre de fêtards");
+
+        nbJoueurs1.setBackground(new java.awt.Color(255, 255, 255));
+        nbJoueurs1.setForeground(new java.awt.Color(0, 0, 0));
+        nbJoueurs1.setText("1");
+        nbJoueurs1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nbJoueurs1ActionPerformed(evt);
+            }
+        });
+
+        nbJoueurs2.setBackground(new java.awt.Color(255, 255, 255));
+        nbJoueurs2.setForeground(new java.awt.Color(0, 0, 0));
+        nbJoueurs2.setText("2");
+        nbJoueurs2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nbJoueurs2ActionPerformed(evt);
+            }
+        });
+
+        nbJoueurs3.setBackground(new java.awt.Color(255, 255, 255));
+        nbJoueurs3.setForeground(new java.awt.Color(0, 0, 0));
+        nbJoueurs3.setText("3");
+        nbJoueurs3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nbJoueurs3ActionPerformed(evt);
+            }
+        });
+
+        nbJoueurs4.setBackground(new java.awt.Color(255, 255, 255));
+        nbJoueurs4.setForeground(new java.awt.Color(0, 0, 0));
+        nbJoueurs4.setText("4");
+        nbJoueurs4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nbJoueurs4ActionPerformed(evt);
+            }
+        });
+
+        validerNbJoueurs.setBackground(new java.awt.Color(255, 255, 255));
+        validerNbJoueurs.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        validerNbJoueurs.setForeground(new java.awt.Color(0, 0, 0));
+        validerNbJoueurs.setText("Valider");
+        validerNbJoueurs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                validerNbJoueursActionPerformed(evt);
+            }
+        });
+
+        txtNomJ1.setBackground(new java.awt.Color(255, 255, 255));
+        txtNomJ1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtNomJ1.setForeground(new java.awt.Color(0, 0, 0));
+        txtNomJ1.setText("Nom : ");
+
+        nomJoueur1.setBackground(new java.awt.Color(255, 255, 255));
+        nomJoueur1.setForeground(new java.awt.Color(0, 0, 0));
+        nomJoueur1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomJoueur1ActionPerformed(evt);
+            }
+        });
+
+        txtNomJ2.setBackground(new java.awt.Color(255, 255, 255));
+        txtNomJ2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtNomJ2.setForeground(new java.awt.Color(0, 0, 0));
+        txtNomJ2.setText("Nom : ");
+
+        nomJoueur2.setBackground(new java.awt.Color(255, 255, 255));
+        nomJoueur2.setForeground(new java.awt.Color(0, 0, 0));
+        nomJoueur2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomJoueur2ActionPerformed(evt);
+            }
+        });
+
+        txtNomJ3.setBackground(new java.awt.Color(255, 255, 255));
+        txtNomJ3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtNomJ3.setForeground(new java.awt.Color(0, 0, 0));
+        txtNomJ3.setText("Nom : ");
+
+        nomJoueur3.setBackground(new java.awt.Color(255, 255, 255));
+        nomJoueur3.setForeground(new java.awt.Color(0, 0, 0));
+        nomJoueur3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomJoueur3ActionPerformed(evt);
+            }
+        });
+
+        txtNomJ4.setBackground(new java.awt.Color(255, 255, 255));
+        txtNomJ4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtNomJ4.setForeground(new java.awt.Color(0, 0, 0));
+        txtNomJ4.setText("Nom : ");
+
+        nomJoueur4.setBackground(new java.awt.Color(255, 255, 255));
+        nomJoueur4.setForeground(new java.awt.Color(0, 0, 0));
+        nomJoueur4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomJoueur4ActionPerformed(evt);
+            }
+        });
+
+        btnRougeJ1.setBackground(new java.awt.Color(255, 0, 0));
+        btnRougeJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRougeJ1ActionPerformed(evt);
+            }
+        });
+
+        btnRougeJ2.setBackground(new java.awt.Color(255, 0, 0));
+        btnRougeJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRougeJ2ActionPerformed(evt);
+            }
+        });
+
+        btnRougeJ3.setBackground(new java.awt.Color(255, 0, 0));
+        btnRougeJ3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRougeJ3ActionPerformed(evt);
+            }
+        });
+
+        btnRougeJ4.setBackground(new java.awt.Color(255, 0, 0));
+        btnRougeJ4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRougeJ4ActionPerformed(evt);
+            }
+        });
+
+        btnJauneJ1.setBackground(new java.awt.Color(255, 204, 0));
+        btnJauneJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJauneJ1ActionPerformed(evt);
+            }
+        });
+
+        btnJauneJ2.setBackground(new java.awt.Color(255, 204, 0));
+        btnJauneJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJauneJ2ActionPerformed(evt);
+            }
+        });
+
+        btnJauneJ3.setBackground(new java.awt.Color(255, 204, 0));
+        btnJauneJ3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJauneJ3ActionPerformed(evt);
+            }
+        });
+
+        btnJauneJ4.setBackground(new java.awt.Color(255, 204, 0));
+        btnJauneJ4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJauneJ4ActionPerformed(evt);
+            }
+        });
+
+        btnVertJ1.setBackground(new java.awt.Color(0, 153, 0));
+        btnVertJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVertJ1ActionPerformed(evt);
+            }
+        });
+
+        btnVertJ2.setBackground(new java.awt.Color(0, 153, 0));
+        btnVertJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVertJ2ActionPerformed(evt);
+            }
+        });
+
+        btnVertJ3.setBackground(new java.awt.Color(0, 153, 0));
+        btnVertJ3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVertJ3ActionPerformed(evt);
+            }
+        });
+
+        btnVertJ4.setBackground(new java.awt.Color(0, 153, 0));
+        btnVertJ4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVertJ4ActionPerformed(evt);
+            }
+        });
+
+        btnBleuJ1.setBackground(new java.awt.Color(0, 0, 255));
+        btnBleuJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBleuJ1ActionPerformed(evt);
+            }
+        });
+
+        btnBleuJ2.setBackground(new java.awt.Color(0, 0, 255));
+        btnBleuJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBleuJ2ActionPerformed(evt);
+            }
+        });
+
+        btnBleuJ3.setBackground(new java.awt.Color(0, 0, 255));
+        btnBleuJ3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBleuJ3ActionPerformed(evt);
+            }
+        });
+
+        btnBleuJ4.setBackground(new java.awt.Color(0, 0, 255));
+        btnBleuJ4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBleuJ4ActionPerformed(evt);
+            }
+        });
+
+        validerNomCouleur.setBackground(new java.awt.Color(255, 255, 255));
+        validerNomCouleur.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        validerNomCouleur.setForeground(new java.awt.Color(0, 0, 0));
+        validerNomCouleur.setText("Valider");
+        validerNomCouleur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                validerNomCouleurActionPerformed(evt);
+            }
+        });
+
+        txtCouleurJ1.setBackground(new java.awt.Color(255, 255, 255));
+        txtCouleurJ1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtCouleurJ1.setForeground(new java.awt.Color(0, 0, 0));
+
+        txtCouleurJ2.setBackground(new java.awt.Color(255, 255, 255));
+        txtCouleurJ2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtCouleurJ2.setForeground(new java.awt.Color(0, 0, 0));
+
+        txtCouleurJ3.setBackground(new java.awt.Color(255, 255, 255));
+        txtCouleurJ3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtCouleurJ3.setForeground(new java.awt.Color(0, 0, 0));
+
+        txtCouleurJ4.setBackground(new java.awt.Color(255, 255, 255));
+        txtCouleurJ4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtCouleurJ4.setForeground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout PMenuNbJoueursLayout = new javax.swing.GroupLayout(PMenuNbJoueurs);
+        PMenuNbJoueurs.setLayout(PMenuNbJoueursLayout);
+        PMenuNbJoueursLayout.setHorizontalGroup(
+            PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(jLabel1))
+                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                        .addComponent(txtNomJ3)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(nomJoueur3, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnRougeJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnJauneJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnVertJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnBleuJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtCouleurJ3))
+                                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                                .addComponent(txtNomJ2)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(nomJoueur2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                                .addComponent(txtNomJ1)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(nomJoueur1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                                .addComponent(btnRougeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnJauneJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnVertJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnBleuJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(txtCouleurJ1))
+                                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                                .addComponent(btnRougeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnJauneJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnVertJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnBleuJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(txtCouleurJ2))))
+                                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                        .addComponent(txtNomJ4)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(nomJoueur4, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnRougeJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnJauneJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnVertJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnBleuJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtCouleurJ4)))
+                                .addGap(0, 48, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMenuNbJoueursLayout.createSequentialGroup()
+                                .addComponent(nbJoueurs1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(150, 150, 150)
+                                .addComponent(nbJoueurs2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(nbJoueurs3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(150, 150, 150)
+                                .addComponent(nbJoueurs4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(75, 75, 75)))))
+                .addContainerGap(55, Short.MAX_VALUE))
+            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                        .addGap(361, 361, 361)
+                        .addComponent(validerNbJoueurs))
+                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                        .addGap(391, 391, 391)
+                        .addComponent(validerNomCouleur)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1400, Short.MAX_VALUE)
+        PMenuNbJoueursLayout.setVerticalGroup(
+            PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nbJoueurs1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nbJoueurs2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nbJoueurs3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nbJoueurs4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(validerNbJoueurs)
+                .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PMenuNbJoueursLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtNomJ1)
+                            .addComponent(nomJoueur1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(60, 60, 60)
+                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtNomJ2)
+                            .addComponent(nomJoueur2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(60, 60, 60)
+                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtNomJ3)
+                            .addComponent(nomJoueur3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(60, 60, 60)
+                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtNomJ4)
+                            .addComponent(nomJoueur4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PMenuNbJoueursLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnJauneJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnRougeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnJauneJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnVertJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnBleuJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                        .addGap(37, 37, 37)
+                                        .addComponent(btnRougeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMenuNbJoueursLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(btnVertJ2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btnBleuJ2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                .addComponent(txtCouleurJ1)
+                                .addGap(63, 63, 63)
+                                .addComponent(txtCouleurJ2)
+                                .addGap(10, 10, 10)))
+                        .addGap(34, 34, 34)
+                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnRougeJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnJauneJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnVertJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnBleuJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(37, 37, 37)
+                                .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnRougeJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnJauneJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnVertJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnBleuJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(txtCouleurJ3)
+                                .addGap(65, 65, 65)
+                                .addComponent(txtCouleurJ4)))))
+                .addGap(88, 88, 88)
+                .addComponent(validerNomCouleur)
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
-        pack();
+        getContentPane().add(PMenuNbJoueurs, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 900, 900));
+
+        PJeu.setBackground(new java.awt.Color(255, 255, 255));
+
+        btnSlide1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide1ActionPerformed(evt);
+            }
+        });
+
+        btnSlide2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide2ActionPerformed(evt);
+            }
+        });
+
+        btnSlide3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide3ActionPerformed(evt);
+            }
+        });
+
+        btnSlide4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide4ActionPerformed(evt);
+            }
+        });
+
+        btnSlide5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide5ActionPerformed(evt);
+            }
+        });
+
+        btnSlide6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide6ActionPerformed(evt);
+            }
+        });
+
+        btnSlide7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide7ActionPerformed(evt);
+            }
+        });
+
+        btnSlide8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide8ActionPerformed(evt);
+            }
+        });
+
+        btnSlide9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide9ActionPerformed(evt);
+            }
+        });
+
+        btnSlide10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide10ActionPerformed(evt);
+            }
+        });
+
+        btnSlide11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide11ActionPerformed(evt);
+            }
+        });
+
+        btnSlide12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSlide12ActionPerformed(evt);
+            }
+        });
+
+        PCellules.setPreferredSize(new java.awt.Dimension(700, 700));
+        PCellules.setLayout(new java.awt.GridLayout(7, 7));
+
+        javax.swing.GroupLayout PJeuLayout = new javax.swing.GroupLayout(PJeu);
+        PJeu.setLayout(PJeuLayout);
+        PJeuLayout.setHorizontalGroup(
+            PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PJeuLayout.createSequentialGroup()
+                .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PJeuLayout.createSequentialGroup()
+                        .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PJeuLayout.createSequentialGroup()
+                                .addGap(200, 200, 200)
+                                .addComponent(btnSlide10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(100, 100, 100)
+                                .addComponent(btnSlide11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(100, 100, 100)
+                                .addComponent(btnSlide12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(PJeuLayout.createSequentialGroup()
+                                .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnSlide6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnSlide5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnSlide4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, 0)
+                                .addComponent(PCellules, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnSlide8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSlide7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PJeuLayout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(btnSlide1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(100, 100, 100)
+                        .addComponent(btnSlide2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(100, 100, 100)
+                        .addComponent(btnSlide3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PJeuLayout.createSequentialGroup()
+                    .addContainerGap(800, Short.MAX_VALUE)
+                    .addComponent(btnSlide9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
+        );
+        PJeuLayout.setVerticalGroup(
+            PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PJeuLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PJeuLayout.createSequentialGroup()
+                        .addComponent(btnSlide6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(100, 100, 100)
+                        .addComponent(btnSlide5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(100, 100, 100)
+                        .addComponent(btnSlide4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PJeuLayout.createSequentialGroup()
+                        .addComponent(btnSlide8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(300, 300, 300)
+                        .addComponent(btnSlide7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(250, 250, 250))
+            .addGroup(PJeuLayout.createSequentialGroup()
+                .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSlide10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSlide11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSlide12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(PCellules, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSlide2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSlide3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSlide1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(48, 48, 48))
+            .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PJeuLayout.createSequentialGroup()
+                    .addGap(410, 410, 410)
+                    .addComponent(btnSlide9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(440, Short.MAX_VALUE)))
+        );
+
+        getContentPane().add(PJeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 900, 900));
+
+        setBounds(0, 0, 1218, 1034);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSlide12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide12ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {          // changer true en false
+            grilleJeu.glissement(12);
+            tourDeJeu = true;
+        }
+
+    }//GEN-LAST:event_btnSlide12ActionPerformed
+
+    private void btnSlide10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide10ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {
+            grilleJeu.glissement(10);
+            tourDeJeu = true;
+        }
+    }//GEN-LAST:event_btnSlide10ActionPerformed
+
+    private void btnSlide11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide11ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {
+            grilleJeu.glissement(11);
+            tourDeJeu = true;
+        }
+    }//GEN-LAST:event_btnSlide11ActionPerformed
+
+    private void btnSlide6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide6ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {
+            grilleJeu.glissement(6);
+            tourDeJeu = true;
+        }
+    }//GEN-LAST:event_btnSlide6ActionPerformed
+
+    private void btnSlide5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide5ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {
+            grilleJeu.glissement(5);
+            tourDeJeu = true;
+        }
+    }//GEN-LAST:event_btnSlide5ActionPerformed
+
+    private void btnSlide4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide4ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {
+            grilleJeu.glissement(4);
+            tourDeJeu = true;
+        }
+    }//GEN-LAST:event_btnSlide4ActionPerformed
+
+    private void btnSlide8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide8ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {
+            grilleJeu.glissement(8);
+            tourDeJeu = true;
+        }
+    }//GEN-LAST:event_btnSlide8ActionPerformed
+
+    private void btnSlide9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide9ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {
+            grilleJeu.glissement(9);
+            tourDeJeu = true;
+        }
+    }//GEN-LAST:event_btnSlide9ActionPerformed
+
+    private void btnSlide7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide7ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {
+            grilleJeu.glissement(7);
+            tourDeJeu = true;
+        }
+    }//GEN-LAST:event_btnSlide7ActionPerformed
+
+    private void btnSlide3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide3ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {
+            grilleJeu.glissement(3);
+            tourDeJeu = true;
+        }
+    }//GEN-LAST:event_btnSlide3ActionPerformed
+
+    private void btnSlide2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide2ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {
+            grilleJeu.glissement(2);
+            tourDeJeu = true;
+        }
+    }//GEN-LAST:event_btnSlide2ActionPerformed
+
+    private void btnSlide1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSlide1ActionPerformed
+        // TODO add your handling code here:
+        if (tourDeJeu == false) {
+            grilleJeu.glissement(1);
+            tourDeJeu = true;
+        }
+    }//GEN-LAST:event_btnSlide1ActionPerformed
+
+    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
+
+    private void nbJoueurs1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs1ActionPerformed
+        // TODO add your handling code here:
+        nbJoueurs = 1;
+    }//GEN-LAST:event_nbJoueurs1ActionPerformed
+
+    private void nbJoueurs2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs2ActionPerformed
+        // TODO add your handling code here:
+        nbJoueurs = 2;
+    }//GEN-LAST:event_nbJoueurs2ActionPerformed
+
+    private void nbJoueurs3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs3ActionPerformed
+        // TODO add your handling code here:
+        nbJoueurs = 3;
+    }//GEN-LAST:event_nbJoueurs3ActionPerformed
+
+    private void nbJoueurs4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs4ActionPerformed
+        // TODO add your handling code here:
+        nbJoueurs = 4;
+    }//GEN-LAST:event_nbJoueurs4ActionPerformed
+
+    private void validerNbJoueursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validerNbJoueursActionPerformed
+        // bouton valider pour le nombre de joueurs, si le nombre est choisi on affiche le bon nombre de champs
+        if (nbJoueurs != 0) {
+            nbJoueurs1.setEnabled(false);
+            nbJoueurs2.setEnabled(false);
+            nbJoueurs3.setEnabled(false);
+            nbJoueurs4.setEnabled(false);
+            validerNomCouleur.setVisible(true);
+            
+        }
+        if (nbJoueurs == 1) {
+            txtNomJ1.setVisible(true);
+            nomJoueur1.setVisible(true);
+            btnRougeJ1.setVisible(true);
+            btnJauneJ1.setVisible(true);
+            btnVertJ1.setVisible(true);
+            btnBleuJ1.setVisible(true);
+            txtCouleurJ1.setVisible(true);
+            
+        } else if (nbJoueurs == 2) {
+            txtNomJ1.setVisible(true);
+            nomJoueur1.setVisible(true);
+            btnRougeJ1.setVisible(true);
+            btnJauneJ1.setVisible(true);
+            btnVertJ1.setVisible(true);
+            btnBleuJ1.setVisible(true);
+            txtCouleurJ1.setVisible(true);
+
+            txtNomJ2.setVisible(true);
+            nomJoueur2.setVisible(true);
+            btnRougeJ2.setVisible(true);
+            btnJauneJ2.setVisible(true);
+            btnVertJ2.setVisible(true);
+            btnBleuJ2.setVisible(true);
+            txtCouleurJ2.setVisible(true);
+
+        } else if (nbJoueurs == 3) {
+            txtNomJ1.setVisible(true);
+            nomJoueur1.setVisible(true);
+            btnRougeJ1.setVisible(true);
+            btnJauneJ1.setVisible(true);
+            btnVertJ1.setVisible(true);
+            btnBleuJ1.setVisible(true);
+            txtCouleurJ1.setVisible(true);
+
+            txtNomJ2.setVisible(true);
+            nomJoueur2.setVisible(true);
+            btnRougeJ2.setVisible(true);
+            btnJauneJ2.setVisible(true);
+            btnVertJ2.setVisible(true);
+            btnBleuJ2.setVisible(true);
+            txtCouleurJ2.setVisible(true);
+
+            txtNomJ3.setVisible(true);
+            nomJoueur3.setVisible(true);
+            btnRougeJ3.setVisible(true);
+            btnJauneJ3.setVisible(true);
+            btnVertJ3.setVisible(true);
+            btnBleuJ3.setVisible(true);
+            txtCouleurJ3.setVisible(true);
+
+        } else if (nbJoueurs == 4) {
+            txtNomJ1.setVisible(true);
+            nomJoueur1.setVisible(true);
+            btnRougeJ1.setVisible(true);
+            btnJauneJ1.setVisible(true);
+            btnVertJ1.setVisible(true);
+            btnBleuJ1.setVisible(true);
+            txtCouleurJ1.setVisible(true);
+
+            txtNomJ2.setVisible(true);
+            nomJoueur2.setVisible(true);
+            btnRougeJ2.setVisible(true);
+            btnJauneJ2.setVisible(true);
+            btnVertJ2.setVisible(true);
+            btnBleuJ2.setVisible(true);
+            txtCouleurJ2.setVisible(true);
+
+            txtNomJ3.setVisible(true);
+            nomJoueur3.setVisible(true);
+            btnRougeJ3.setVisible(true);
+            btnJauneJ3.setVisible(true);
+            btnVertJ3.setVisible(true);
+            btnBleuJ3.setVisible(true);
+            txtCouleurJ3.setVisible(true);
+
+            txtNomJ4.setVisible(true);
+            nomJoueur4.setVisible(true);
+            btnRougeJ4.setVisible(true);
+            btnJauneJ4.setVisible(true);
+            btnVertJ4.setVisible(true);
+            btnBleuJ4.setVisible(true);
+            txtCouleurJ4.setVisible(true);
+        }
+    }//GEN-LAST:event_validerNbJoueursActionPerformed
+
+    private void nomJoueur1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur1ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_nomJoueur1ActionPerformed
+
+    private void nomJoueur2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomJoueur2ActionPerformed
+
+    private void nomJoueur3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomJoueur3ActionPerformed
+
+    private void nomJoueur4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomJoueur4ActionPerformed
+
+    private void btnRougeJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ1ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[0].affecterCouleur("rouge");
+        txtCouleurJ1.setText("rouge");
+        PMenuNbJoueurs.repaint();
+
+    }//GEN-LAST:event_btnRougeJ1ActionPerformed
+
+    private void btnJauneJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ1ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[0].affecterCouleur("jaune");
+        txtCouleurJ1.setText("jaune");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnJauneJ1ActionPerformed
+
+    private void btnVertJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ1ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[0].affecterCouleur("vert");
+        txtCouleurJ1.setText("vert");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnVertJ1ActionPerformed
+
+    private void btnBleuJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ1ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[0].affecterCouleur("bleu");
+        txtCouleurJ1.setText("bleu");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnBleuJ1ActionPerformed
+
+    private void btnRougeJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ2ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[1].affecterCouleur("rouge");
+        txtCouleurJ2.setText("rouge");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnRougeJ2ActionPerformed
+
+    private void btnJauneJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ2ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[1].affecterCouleur("jaune");
+        txtCouleurJ2.setText("jaune");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnJauneJ2ActionPerformed
+
+    private void btnVertJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ2ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[1].affecterCouleur("vert");
+        txtCouleurJ2.setText("vert");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnVertJ2ActionPerformed
+
+    private void btnBleuJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ2ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[1].affecterCouleur("bleu");
+        txtCouleurJ2.setText("bleu");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnBleuJ2ActionPerformed
+
+    private void btnRougeJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ3ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[3].affecterCouleur("rouge");
+        txtCouleurJ3.setText("rouge");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnRougeJ3ActionPerformed
+
+    private void btnJauneJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ3ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[3].affecterCouleur("jaune");
+        txtCouleurJ3.setText("jaune");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnJauneJ3ActionPerformed
+
+    private void btnVertJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ3ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[3].affecterCouleur("vert");
+        txtCouleurJ3.setText("vert");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnVertJ3ActionPerformed
+
+    private void btnBleuJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ3ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[3].affecterCouleur("bleu");
+        txtCouleurJ3.setText("bleu");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnBleuJ3ActionPerformed
+
+    private void btnRougeJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ4ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[4].affecterCouleur("rouge");
+        txtCouleurJ4.setText("rouge");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnRougeJ4ActionPerformed
+
+    private void btnJauneJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ4ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[4].affecterCouleur("jaune");
+        txtCouleurJ4.setText("jaune");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnJauneJ4ActionPerformed
+
+    private void btnVertJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ4ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[4].affecterCouleur("vert");
+        txtCouleurJ4.setText("vert");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnVertJ4ActionPerformed
+
+    private void btnBleuJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ4ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[4].affecterCouleur("bleu");
+        txtCouleurJ4.setText("bleu");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnBleuJ4ActionPerformed
+
+    private void validerNomCouleurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validerNomCouleurActionPerformed
+        /* on verifie que la couleur de chaque joueur est differente sauf si 
+        elles sont nulles dans le cas ou il y a moins de joueurs que 4
+        */
+        boolean verifCouleurDiff = true; 
+        for (int i =0;i<4;i++){
+            for(int j =0;j<4;j++){
+                if(listeJoueurs[i].couleur == listeJoueurs[j].couleur && listeJoueurs[i] != null){
+                    verifCouleurDiff = false;
+                }
+            }
+        }
+        if (verifCouleurDiff == true){
+            PMenuNbJoueurs.setVisible(false);
+            PJeu.setVisible(true);
+        }
+    }//GEN-LAST:event_validerNomCouleurActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,6 +1147,136 @@ public class Affichage extends javax.swing.JFrame {
 
     }
 
+    public boolean deplacerJoueur(Cellule uneCellule) {
+        /*
+        Prends la cellule sur laquelle à cliqué le joueur et déplace le joueur 
+        dessus si c'est possible, renvoie true dans ce cas, si les déplacement 
+        ne s'est pas fait on renvoie false
+         */
+        int x = 0;//on retrouve les coordonées de la cellule du joueurCourant
+        int y = 0;
+        for (int i = 0; i < 7; i++) {
+            for (int j = 0; j < 7; j++) {
+                if (grilleJeu.cellule[i][j].pionCourant == joueurCourant) {
+                    x = i;
+                    y = j;
+                }
+            }
+        }
+        // on recherche les cellules sur lesquelles le pion peut se déplacer 
+        //et on change leur variable 'deplacement' sur true si c'est le cas 
+        grilleJeu.rechercheCelluleDeplacement(grilleJeu.cellule[x][y]);
+
+        // au cas ou le joueur décide de ne pas bouger ou qu'il ne peut pas 
+        //bouger on passe sa case comme valable pour un déplacement
+        grilleJeu.cellule[x][y].deplacement = true;
+
+        // si la case choisie est une case sur laquelle on peut se deplacer 
+        //alors on deplace et renvoie true, sinon on renvoie false
+        if (uneCellule.deplacement == true) {
+            uneCellule.affecterJoueur(grilleJeu.cellule[x][y].repcupererPion());
+            grilleJeu.reinitialisationDeplacement();
+            tourDeJeu = false;
+            return true;
+        }
+
+        // une foi le pion déplacé on remet à false les variables 'deplacement' 
+        grilleJeu.reinitialisationDeplacement();
+        return false;
+
+    }
+    
+    public boolean trouverTresor(Cellule uneCellule){
+        if (joueurCourant.tresor1 == uneCellule.tresor || joueurCourant.tresor2 == uneCellule.tresor){
+            return true;
+        }return false;
+    }
+
+    public void prochainJoueur() {
+        switch (nbJoueurs) {
+            case 1:
+                break;
+            case 2:
+                if (joueurCourant == listeJoueurs[0]) {
+                    joueurCourant = listeJoueurs[1];
+                } else {
+                    joueurCourant = listeJoueurs[0];
+                }
+                break;
+            case 3:
+                if (joueurCourant == listeJoueurs[0]) {
+                    joueurCourant = listeJoueurs[1];
+                } else if (joueurCourant == listeJoueurs[1]) {
+                    joueurCourant = listeJoueurs[2];
+                } else if (joueurCourant == listeJoueurs[2]) {
+                    joueurCourant = listeJoueurs[0];
+                }
+            case 4:
+                if (joueurCourant == listeJoueurs[0]) {
+                    joueurCourant = listeJoueurs[1];
+                } else if (joueurCourant == listeJoueurs[1]) {
+                    joueurCourant = listeJoueurs[2];
+                } else if (joueurCourant == listeJoueurs[2]) {
+                    joueurCourant = listeJoueurs[3];
+                } else if (joueurCourant == listeJoueurs[3]) {
+                    joueurCourant = listeJoueurs[0];
+                }
+
+        }
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PCellules;
+    private javax.swing.JPanel PJeu;
+    private javax.swing.JPanel PMenuNbJoueurs;
+    private javax.swing.JButton btnBleuJ1;
+    private javax.swing.JButton btnBleuJ2;
+    private javax.swing.JButton btnBleuJ3;
+    private javax.swing.JButton btnBleuJ4;
+    private javax.swing.JButton btnJauneJ1;
+    private javax.swing.JButton btnJauneJ2;
+    private javax.swing.JButton btnJauneJ3;
+    private javax.swing.JButton btnJauneJ4;
+    private javax.swing.JButton btnRougeJ1;
+    private javax.swing.JButton btnRougeJ2;
+    private javax.swing.JButton btnRougeJ3;
+    private javax.swing.JButton btnRougeJ4;
+    private javax.swing.JButton btnSlide1;
+    private javax.swing.JButton btnSlide10;
+    private javax.swing.JButton btnSlide11;
+    private javax.swing.JButton btnSlide12;
+    private javax.swing.JButton btnSlide2;
+    private javax.swing.JButton btnSlide3;
+    private javax.swing.JButton btnSlide4;
+    private javax.swing.JButton btnSlide5;
+    private javax.swing.JButton btnSlide6;
+    private javax.swing.JButton btnSlide7;
+    private javax.swing.JButton btnSlide8;
+    private javax.swing.JButton btnSlide9;
+    private javax.swing.JButton btnVertJ1;
+    private javax.swing.JButton btnVertJ2;
+    private javax.swing.JButton btnVertJ3;
+    private javax.swing.JButton btnVertJ4;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton nbJoueurs1;
+    private javax.swing.JButton nbJoueurs2;
+    private javax.swing.JButton nbJoueurs3;
+    private javax.swing.JButton nbJoueurs4;
+    private javax.swing.JTextField nomJoueur1;
+    private javax.swing.JTextField nomJoueur2;
+    private javax.swing.JTextField nomJoueur3;
+    private javax.swing.JTextField nomJoueur4;
+    private javax.swing.JLabel txtCouleurJ1;
+    private javax.swing.JLabel txtCouleurJ2;
+    private javax.swing.JLabel txtCouleurJ3;
+    private javax.swing.JLabel txtCouleurJ4;
+    private javax.swing.JLabel txtNomJ1;
+    private javax.swing.JLabel txtNomJ2;
+    private javax.swing.JLabel txtNomJ3;
+    private javax.swing.JLabel txtNomJ4;
+    private javax.swing.JButton validerNbJoueurs;
+    private javax.swing.JButton validerNomCouleur;
     // End of variables declaration//GEN-END:variables
 }

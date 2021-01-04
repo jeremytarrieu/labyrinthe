@@ -11,24 +11,15 @@ package labrinthe;
  */
 public class Joueur {
     String nom = new String();
-    String couleur = new String();
-    Carte deck [] = new Carte[3]; // Yu-Gi-Ho... à toi de jouer !
+    String couleur = new String(); // rouge, jaune, vert, bleu
+    int tresor1;
+    int tresor2;// les 2 trésors associés au joueur
     
+    public Joueur(){}
     
     public void affecterCouleur(String uneCouleur){
         couleur = uneCouleur;
     }
     
-    public boolean etreGagnant(){
-        /*
-        Prends un Joueur en argument et renvoie un booleen.
-        Si le joueur possède toutes ses cartes retournées il gagne
-        */
-        
-        for (int i = 0;i<3;i++){
-            if(this.deck[i].visible == false){
-                return false;
-            }       
-        }return true;
-    }
+    
 }
