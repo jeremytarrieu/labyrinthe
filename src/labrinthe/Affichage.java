@@ -20,43 +20,43 @@ public class Affichage extends javax.swing.JFrame {
     public Affichage() {
         initComponents();
         PJeu.setVisible(false);
-        
+
         txtNomJ1.setVisible(false);
         nomJoueur1.setVisible(false);
         txtCouleurJ1.setVisible(false);
-        
+
         txtNomJ2.setVisible(false);
         nomJoueur2.setVisible(false);
         txtCouleurJ2.setVisible(false);
-        
+
         txtNomJ3.setVisible(false);
         nomJoueur3.setVisible(false);
-        txtCouleurJ2.setVisible(false);
-        
+        txtCouleurJ3.setVisible(false);
+
         txtNomJ4.setVisible(false);
         nomJoueur4.setVisible(false);
         txtCouleurJ4.setVisible(false);
-        
+
         btnRougeJ1.setVisible(false);
         btnRougeJ2.setVisible(false);
         btnRougeJ3.setVisible(false);
         btnRougeJ4.setVisible(false);
-        
+
         btnJauneJ1.setVisible(false);
         btnJauneJ2.setVisible(false);
         btnJauneJ3.setVisible(false);
         btnJauneJ4.setVisible(false);
-        
+
         btnVertJ1.setVisible(false);
         btnVertJ2.setVisible(false);
         btnVertJ3.setVisible(false);
         btnVertJ4.setVisible(false);
-        
+
         btnBleuJ1.setVisible(false);
         btnBleuJ2.setVisible(false);
         btnBleuJ3.setVisible(false);
         btnBleuJ4.setVisible(false);
-        
+
         validerNomCouleur.setVisible(false);
 
         for (int i = 0; i < 7; i++) {
@@ -394,18 +394,22 @@ public class Affichage extends javax.swing.JFrame {
         txtCouleurJ1.setBackground(new java.awt.Color(255, 255, 255));
         txtCouleurJ1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         txtCouleurJ1.setForeground(new java.awt.Color(0, 0, 0));
+        txtCouleurJ1.setText("Choisis !");
 
         txtCouleurJ2.setBackground(new java.awt.Color(255, 255, 255));
         txtCouleurJ2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         txtCouleurJ2.setForeground(new java.awt.Color(0, 0, 0));
+        txtCouleurJ2.setText("Choisis !");
 
         txtCouleurJ3.setBackground(new java.awt.Color(255, 255, 255));
         txtCouleurJ3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         txtCouleurJ3.setForeground(new java.awt.Color(0, 0, 0));
+        txtCouleurJ3.setText("Choisis !");
 
         txtCouleurJ4.setBackground(new java.awt.Color(255, 255, 255));
         txtCouleurJ4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         txtCouleurJ4.setForeground(new java.awt.Color(0, 0, 0));
+        txtCouleurJ4.setText("Choisis !");
 
         javax.swing.GroupLayout PMenuNbJoueursLayout = new javax.swing.GroupLayout(PMenuNbJoueurs);
         PMenuNbJoueurs.setLayout(PMenuNbJoueursLayout);
@@ -424,66 +428,66 @@ public class Affichage extends javax.swing.JFrame {
                                     .addComponent(jLabel2)
                                     .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
-                                        .addComponent(txtNomJ3)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(nomJoueur3, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnRougeJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnJauneJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnVertJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnBleuJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtCouleurJ3))
-                                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
-                                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
-                                                .addComponent(txtNomJ2)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(nomJoueur2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
-                                                .addComponent(txtNomJ1)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(nomJoueur1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addGap(18, 18, 18)
                                         .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
-                                                .addComponent(btnRougeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(btnJauneJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(btnVertJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(btnBleuJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtNomJ3)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(txtCouleurJ1))
+                                                .addComponent(nomJoueur3, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnRougeJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnJauneJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnVertJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnBleuJ3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
-                                                .addComponent(btnRougeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(btnJauneJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(btnVertJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(btnBleuJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtNomJ4)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(txtCouleurJ2))))
-                                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
-                                        .addComponent(txtNomJ4)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(nomJoueur4, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnRougeJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnJauneJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnVertJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnBleuJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtCouleurJ4)))
-                                .addGap(0, 48, Short.MAX_VALUE))
+                                                .addComponent(nomJoueur4, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnRougeJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnJauneJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnVertJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(btnBleuJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                                .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                                        .addComponent(txtNomJ2)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(nomJoueur2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                                        .addComponent(txtNomJ1)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(nomJoueur1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                                        .addComponent(btnRougeJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(btnJauneJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(btnVertJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(btnBleuJ1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
+                                                        .addComponent(btnRougeJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(btnJauneJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(btnVertJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(btnBleuJ2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addGap(27, 27, 27)
+                                        .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtCouleurJ1)
+                                            .addComponent(txtCouleurJ4)
+                                            .addComponent(txtCouleurJ3)
+                                            .addComponent(txtCouleurJ2))))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PMenuNbJoueursLayout.createSequentialGroup()
                                 .addComponent(nbJoueurs1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(150, 150, 150)
@@ -493,7 +497,7 @@ public class Affichage extends javax.swing.JFrame {
                                 .addGap(150, 150, 150)
                                 .addComponent(nbJoueurs4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(75, 75, 75)))))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
                 .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
@@ -560,10 +564,10 @@ public class Affichage extends javax.swing.JFrame {
                                             .addComponent(btnBleuJ2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
                                 .addComponent(txtCouleurJ1)
-                                .addGap(63, 63, 63)
+                                .addGap(65, 65, 65)
                                 .addComponent(txtCouleurJ2)
-                                .addGap(10, 10, 10)))
-                        .addGap(34, 34, 34)
+                                .addGap(11, 11, 11)))
+                        .addGap(45, 45, 45)
                         .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
                                 .addGroup(PMenuNbJoueursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -578,13 +582,13 @@ public class Affichage extends javax.swing.JFrame {
                                     .addComponent(btnVertJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnBleuJ4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(PMenuNbJoueursLayout.createSequentialGroup()
-                                .addGap(13, 13, 13)
+                                .addGap(10, 10, 10)
                                 .addComponent(txtCouleurJ3)
-                                .addGap(65, 65, 65)
+                                .addGap(68, 68, 68)
                                 .addComponent(txtCouleurJ4)))))
                 .addGap(88, 88, 88)
                 .addComponent(validerNomCouleur)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         getContentPane().add(PMenuNbJoueurs, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 900, 900));
@@ -843,29 +847,157 @@ public class Affichage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSlide1ActionPerformed
 
-    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
+    private void validerNomCouleurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validerNomCouleurActionPerformed
+        /* on verifie que la couleur de chaque joueur est differente sauf si
+        elles sont nulles dans le cas ou il y a moins de joueurs que 4
+         */
+        PMenuNbJoueurs.setVisible(false);
+            PJeu.setVisible(true);
+        boolean verifCouleurDiff = true;
+        for (int i = 0; i < 4; i++) {
+            if (listeJoueurs[i] != null) {
+                for (int j = 0; j < 4; j++) {
+                    if (listeJoueurs[j] != null) {
+                        if ( listeJoueurs[i].couleur == listeJoueurs[j].couleur && listeJoueurs[i].couleur != null) {
+                            verifCouleurDiff = false;
+                        }
+                    }
+                }
+            }
+        }
+        if (verifCouleurDiff == true) {
+            PMenuNbJoueurs.setVisible(false);
+            PJeu.setVisible(true);
+        }
+    }//GEN-LAST:event_validerNomCouleurActionPerformed
 
-    private void nbJoueurs1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs1ActionPerformed
+    private void btnBleuJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ4ActionPerformed
         // TODO add your handling code here:
-        nbJoueurs = 1;
-    }//GEN-LAST:event_nbJoueurs1ActionPerformed
+        listeJoueurs[3].affecterCouleur("bleu");
+        txtCouleurJ4.setText("bleu");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnBleuJ4ActionPerformed
 
-    private void nbJoueurs2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs2ActionPerformed
+    private void btnBleuJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ3ActionPerformed
         // TODO add your handling code here:
-        nbJoueurs = 2;
-    }//GEN-LAST:event_nbJoueurs2ActionPerformed
+        listeJoueurs[2].affecterCouleur("bleu");
+        txtCouleurJ3.setText("bleu");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnBleuJ3ActionPerformed
 
-    private void nbJoueurs3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs3ActionPerformed
+    private void btnBleuJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ2ActionPerformed
         // TODO add your handling code here:
-        nbJoueurs = 3;
-    }//GEN-LAST:event_nbJoueurs3ActionPerformed
+        listeJoueurs[1].affecterCouleur("bleu");
+        txtCouleurJ2.setText("bleu");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnBleuJ2ActionPerformed
 
-    private void nbJoueurs4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs4ActionPerformed
+    private void btnBleuJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ1ActionPerformed
         // TODO add your handling code here:
-        nbJoueurs = 4;
-    }//GEN-LAST:event_nbJoueurs4ActionPerformed
+        listeJoueurs[0].affecterCouleur("bleu");
+        txtCouleurJ1.setText("bleu");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnBleuJ1ActionPerformed
+
+    private void btnVertJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ4ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[3].affecterCouleur("vert");
+        txtCouleurJ4.setText("vert");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnVertJ4ActionPerformed
+
+    private void btnVertJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ3ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[2].affecterCouleur("vert");
+        txtCouleurJ3.setText("vert");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnVertJ3ActionPerformed
+
+    private void btnVertJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ2ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[1].affecterCouleur("vert");
+        txtCouleurJ2.setText("vert");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnVertJ2ActionPerformed
+
+    private void btnVertJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ1ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[0].affecterCouleur("vert");
+        txtCouleurJ1.setText("vert");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnVertJ1ActionPerformed
+
+    private void btnJauneJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ4ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[3].affecterCouleur("jaune");
+        txtCouleurJ4.setText("jaune");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnJauneJ4ActionPerformed
+
+    private void btnJauneJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ3ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[2].affecterCouleur("jaune");
+        txtCouleurJ3.setText("jaune");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnJauneJ3ActionPerformed
+
+    private void btnJauneJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ2ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[1].affecterCouleur("jaune");
+        txtCouleurJ2.setText("jaune");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnJauneJ2ActionPerformed
+
+    private void btnJauneJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ1ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[0].affecterCouleur("jaune");
+        txtCouleurJ1.setText("jaune");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnJauneJ1ActionPerformed
+
+    private void btnRougeJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ4ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[3].affecterCouleur("rouge");
+        txtCouleurJ4.setText("rouge");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnRougeJ4ActionPerformed
+
+    private void btnRougeJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ3ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[2].affecterCouleur("rouge");
+        txtCouleurJ3.setText("rouge");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnRougeJ3ActionPerformed
+
+    private void btnRougeJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ2ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[1].affecterCouleur("rouge");
+        txtCouleurJ2.setText("rouge");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnRougeJ2ActionPerformed
+
+    private void btnRougeJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ1ActionPerformed
+        // TODO add your handling code here:
+        listeJoueurs[0].affecterCouleur("rouge");
+        txtCouleurJ1.setText("rouge");
+        PMenuNbJoueurs.repaint();
+    }//GEN-LAST:event_btnRougeJ1ActionPerformed
+
+    private void nomJoueur4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomJoueur4ActionPerformed
+
+    private void nomJoueur3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomJoueur3ActionPerformed
+
+    private void nomJoueur2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomJoueur2ActionPerformed
+
+    private void nomJoueur1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomJoueur1ActionPerformed
 
     private void validerNbJoueursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validerNbJoueursActionPerformed
         // bouton valider pour le nombre de joueurs, si le nombre est choisi on affiche le bon nombre de champs
@@ -875,7 +1007,7 @@ public class Affichage extends javax.swing.JFrame {
             nbJoueurs3.setEnabled(false);
             nbJoueurs4.setEnabled(false);
             validerNomCouleur.setVisible(true);
-            
+
         }
         if (nbJoueurs == 1) {
             txtNomJ1.setVisible(true);
@@ -885,7 +1017,9 @@ public class Affichage extends javax.swing.JFrame {
             btnVertJ1.setVisible(true);
             btnBleuJ1.setVisible(true);
             txtCouleurJ1.setVisible(true);
-            
+
+            listeJoueurs[0] = new Joueur();
+
         } else if (nbJoueurs == 2) {
             txtNomJ1.setVisible(true);
             nomJoueur1.setVisible(true);
@@ -895,6 +1029,8 @@ public class Affichage extends javax.swing.JFrame {
             btnBleuJ1.setVisible(true);
             txtCouleurJ1.setVisible(true);
 
+            listeJoueurs[0] = new Joueur();
+
             txtNomJ2.setVisible(true);
             nomJoueur2.setVisible(true);
             btnRougeJ2.setVisible(true);
@@ -902,6 +1038,8 @@ public class Affichage extends javax.swing.JFrame {
             btnVertJ2.setVisible(true);
             btnBleuJ2.setVisible(true);
             txtCouleurJ2.setVisible(true);
+
+            listeJoueurs[1] = new Joueur();
 
         } else if (nbJoueurs == 3) {
             txtNomJ1.setVisible(true);
@@ -912,6 +1050,8 @@ public class Affichage extends javax.swing.JFrame {
             btnBleuJ1.setVisible(true);
             txtCouleurJ1.setVisible(true);
 
+            listeJoueurs[0] = new Joueur();
+
             txtNomJ2.setVisible(true);
             nomJoueur2.setVisible(true);
             btnRougeJ2.setVisible(true);
@@ -920,6 +1060,8 @@ public class Affichage extends javax.swing.JFrame {
             btnBleuJ2.setVisible(true);
             txtCouleurJ2.setVisible(true);
 
+            listeJoueurs[1] = new Joueur();
+
             txtNomJ3.setVisible(true);
             nomJoueur3.setVisible(true);
             btnRougeJ3.setVisible(true);
@@ -927,6 +1069,8 @@ public class Affichage extends javax.swing.JFrame {
             btnVertJ3.setVisible(true);
             btnBleuJ3.setVisible(true);
             txtCouleurJ3.setVisible(true);
+
+            listeJoueurs[2] = new Joueur();
 
         } else if (nbJoueurs == 4) {
             txtNomJ1.setVisible(true);
@@ -937,6 +1081,8 @@ public class Affichage extends javax.swing.JFrame {
             btnBleuJ1.setVisible(true);
             txtCouleurJ1.setVisible(true);
 
+            listeJoueurs[0] = new Joueur();
+
             txtNomJ2.setVisible(true);
             nomJoueur2.setVisible(true);
             btnRougeJ2.setVisible(true);
@@ -944,6 +1090,8 @@ public class Affichage extends javax.swing.JFrame {
             btnVertJ2.setVisible(true);
             btnBleuJ2.setVisible(true);
             txtCouleurJ2.setVisible(true);
+
+            listeJoueurs[1] = new Joueur();
 
             txtNomJ3.setVisible(true);
             nomJoueur3.setVisible(true);
@@ -953,6 +1101,8 @@ public class Affichage extends javax.swing.JFrame {
             btnBleuJ3.setVisible(true);
             txtCouleurJ3.setVisible(true);
 
+            listeJoueurs[2] = new Joueur();
+
             txtNomJ4.setVisible(true);
             nomJoueur4.setVisible(true);
             btnRougeJ4.setVisible(true);
@@ -960,156 +1110,34 @@ public class Affichage extends javax.swing.JFrame {
             btnVertJ4.setVisible(true);
             btnBleuJ4.setVisible(true);
             txtCouleurJ4.setVisible(true);
+
+            listeJoueurs[3] = new Joueur();
         }
     }//GEN-LAST:event_validerNbJoueursActionPerformed
 
-    private void nomJoueur1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur1ActionPerformed
+    private void nbJoueurs4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs4ActionPerformed
         // TODO add your handling code here:
+        nbJoueurs = 4;
+    }//GEN-LAST:event_nbJoueurs4ActionPerformed
 
-    }//GEN-LAST:event_nomJoueur1ActionPerformed
-
-    private void nomJoueur2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur2ActionPerformed
+    private void nbJoueurs3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomJoueur2ActionPerformed
+        nbJoueurs = 3;
+    }//GEN-LAST:event_nbJoueurs3ActionPerformed
 
-    private void nomJoueur3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur3ActionPerformed
+    private void nbJoueurs2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomJoueur3ActionPerformed
+        nbJoueurs = 2;
+    }//GEN-LAST:event_nbJoueurs2ActionPerformed
 
-    private void nomJoueur4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomJoueur4ActionPerformed
+    private void nbJoueurs1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nbJoueurs1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomJoueur4ActionPerformed
+        nbJoueurs = 1;
+    }//GEN-LAST:event_nbJoueurs1ActionPerformed
 
-    private void btnRougeJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ1ActionPerformed
+    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
         // TODO add your handling code here:
-        listeJoueurs[0].affecterCouleur("rouge");
-        txtCouleurJ1.setText("rouge");
-        PMenuNbJoueurs.repaint();
-
-    }//GEN-LAST:event_btnRougeJ1ActionPerformed
-
-    private void btnJauneJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ1ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[0].affecterCouleur("jaune");
-        txtCouleurJ1.setText("jaune");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnJauneJ1ActionPerformed
-
-    private void btnVertJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ1ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[0].affecterCouleur("vert");
-        txtCouleurJ1.setText("vert");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnVertJ1ActionPerformed
-
-    private void btnBleuJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ1ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[0].affecterCouleur("bleu");
-        txtCouleurJ1.setText("bleu");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnBleuJ1ActionPerformed
-
-    private void btnRougeJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ2ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[1].affecterCouleur("rouge");
-        txtCouleurJ2.setText("rouge");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnRougeJ2ActionPerformed
-
-    private void btnJauneJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ2ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[1].affecterCouleur("jaune");
-        txtCouleurJ2.setText("jaune");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnJauneJ2ActionPerformed
-
-    private void btnVertJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ2ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[1].affecterCouleur("vert");
-        txtCouleurJ2.setText("vert");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnVertJ2ActionPerformed
-
-    private void btnBleuJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ2ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[1].affecterCouleur("bleu");
-        txtCouleurJ2.setText("bleu");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnBleuJ2ActionPerformed
-
-    private void btnRougeJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ3ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[3].affecterCouleur("rouge");
-        txtCouleurJ3.setText("rouge");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnRougeJ3ActionPerformed
-
-    private void btnJauneJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ3ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[3].affecterCouleur("jaune");
-        txtCouleurJ3.setText("jaune");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnJauneJ3ActionPerformed
-
-    private void btnVertJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ3ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[3].affecterCouleur("vert");
-        txtCouleurJ3.setText("vert");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnVertJ3ActionPerformed
-
-    private void btnBleuJ3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ3ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[3].affecterCouleur("bleu");
-        txtCouleurJ3.setText("bleu");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnBleuJ3ActionPerformed
-
-    private void btnRougeJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRougeJ4ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[4].affecterCouleur("rouge");
-        txtCouleurJ4.setText("rouge");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnRougeJ4ActionPerformed
-
-    private void btnJauneJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJauneJ4ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[4].affecterCouleur("jaune");
-        txtCouleurJ4.setText("jaune");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnJauneJ4ActionPerformed
-
-    private void btnVertJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVertJ4ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[4].affecterCouleur("vert");
-        txtCouleurJ4.setText("vert");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnVertJ4ActionPerformed
-
-    private void btnBleuJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ4ActionPerformed
-        // TODO add your handling code here:
-        listeJoueurs[4].affecterCouleur("bleu");
-        txtCouleurJ4.setText("bleu");
-        PMenuNbJoueurs.repaint();
-    }//GEN-LAST:event_btnBleuJ4ActionPerformed
-
-    private void validerNomCouleurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validerNomCouleurActionPerformed
-        /* on verifie que la couleur de chaque joueur est differente sauf si 
-        elles sont nulles dans le cas ou il y a moins de joueurs que 4
-        */
-        boolean verifCouleurDiff = true; 
-        for (int i =0;i<4;i++){
-            for(int j =0;j<4;j++){
-                if(listeJoueurs[i].couleur == listeJoueurs[j].couleur && listeJoueurs[i] != null){
-                    verifCouleurDiff = false;
-                }
-            }
-        }
-        if (verifCouleurDiff == true){
-            PMenuNbJoueurs.setVisible(false);
-            PJeu.setVisible(true);
-        }
-    }//GEN-LAST:event_validerNomCouleurActionPerformed
+    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1185,11 +1213,12 @@ public class Affichage extends javax.swing.JFrame {
         return false;
 
     }
-    
-    public boolean trouverTresor(Cellule uneCellule){
-        if (joueurCourant.tresor1 == uneCellule.tresor || joueurCourant.tresor2 == uneCellule.tresor){
+
+    public boolean trouverTresor(Cellule uneCellule) {
+        if (joueurCourant.tresor1 == uneCellule.tresor || joueurCourant.tresor2 == uneCellule.tresor) {
             return true;
-        }return false;
+        }
+        return false;
     }
 
     public void prochainJoueur() {
@@ -1223,6 +1252,47 @@ public class Affichage extends javax.swing.JFrame {
                 }
 
         }
+    }
+    
+    public void initialiserPartie(){
+        /* on place les cellules immobiles
+         des angles dans les 4 coins et dans les cellules  : 
+        (0,2) (0,4)
+        (2,0) (2,2) (2,4) (2,6) 
+        (4,0) (4,2) (4,4) (4,6)
+        (6,2) (6,4) 
+        des 'T' pointant vers le centre pour ceux sur les bords 
+        */
+        
+        //placement des angles
+        grilleJeu.cellule[0][0].angle(0);
+        grilleJeu.cellule[6][0].angle(1);
+        grilleJeu.cellule[6][6].angle(2);
+        grilleJeu.cellule[0][6].angle(3);
+        
+        //placement des bords
+        grilleJeu.cellule[0][2].t(0);
+        grilleJeu.cellule[0][4].t(0);
+        grilleJeu.cellule[2][0].t(1);
+        grilleJeu.cellule[4][0].t(1);
+        grilleJeu.cellule[2][6].t(2);
+        grilleJeu.cellule[4][6].t(2);
+        grilleJeu.cellule[6][2].t(3);
+        grilleJeu.cellule[6][4].t(3);
+        
+        //placement des cellules internes
+        grilleJeu.cellule[2][2].t(0);
+        grilleJeu.cellule[4][2].t(1);
+        grilleJeu.cellule[2][4].t(2);
+        grilleJeu.cellule[4][4].t(3);
+        
+        
+        // placer le reste aléatoirement  à partir d'un tableau dans lequel on met tout le reste 
+        
+        
+        
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

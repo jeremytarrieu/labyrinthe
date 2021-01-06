@@ -60,76 +60,79 @@
                                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                       <Component id="jFormattedTextField1" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtNomJ3" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="nomJoueur3" min="-2" pref="247" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="btnRougeJ3" min="-2" pref="50" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="btnJauneJ3" min="-2" pref="50" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="btnVertJ3" min="-2" pref="50" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="btnBleuJ3" min="-2" pref="50" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="txtCouleurJ3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="txtNomJ2" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="nomJoueur2" min="-2" pref="247" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Component id="txtNomJ1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="nomJoueur1" min="-2" pref="247" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="btnRougeJ1" min="-2" pref="50" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="btnJauneJ1" min="-2" pref="50" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="btnVertJ1" min="-2" pref="50" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="btnBleuJ1" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <Component id="txtNomJ3" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="txtCouleurJ1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="nomJoueur3" min="-2" pref="247" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="btnRougeJ3" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="btnJauneJ3" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="btnVertJ3" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="btnBleuJ3" min="-2" pref="50" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="btnRougeJ2" min="-2" pref="50" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="btnJauneJ2" min="-2" pref="50" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="btnVertJ2" min="-2" pref="50" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="btnBleuJ2" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <Component id="txtNomJ4" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="txtCouleurJ2" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="nomJoueur4" min="-2" pref="247" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="btnRougeJ4" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="btnJauneJ4" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="btnVertJ4" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="btnBleuJ4" min="-2" pref="50" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="txtNomJ2" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="nomJoueur2" min="-2" pref="247" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="txtNomJ1" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="nomJoueur1" min="-2" pref="247" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="btnRougeJ1" min="-2" pref="50" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="btnJauneJ1" min="-2" pref="50" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="btnVertJ1" min="-2" pref="50" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="btnBleuJ1" min="-2" pref="50" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="btnRougeJ2" min="-2" pref="50" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="btnJauneJ2" min="-2" pref="50" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="btnVertJ2" min="-2" pref="50" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="btnBleuJ2" min="-2" pref="50" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
                                               </Group>
                                           </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtNomJ4" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="nomJoueur4" min="-2" pref="247" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="btnRougeJ4" min="-2" pref="50" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="btnJauneJ4" min="-2" pref="50" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="btnVertJ4" min="-2" pref="50" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="btnBleuJ4" min="-2" pref="50" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="txtCouleurJ4" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="txtCouleurJ1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtCouleurJ4" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtCouleurJ3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtCouleurJ2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="nbJoueurs1" min="-2" pref="50" max="-2" attributes="0"/>
@@ -144,7 +147,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="55" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -229,12 +232,12 @@
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="txtCouleurJ1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                                   <Component id="txtCouleurJ2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -252,9 +255,9 @@
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                   <Component id="txtCouleurJ3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                                   <Component id="txtCouleurJ4" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -262,7 +265,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                   <Component id="validerNomCouleur" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="108" max="32767" attributes="0"/>
+                  <EmptySpace pref="97" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -682,6 +685,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+            <Property name="text" type="java.lang.String" value="Choisis !"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="txtCouleurJ2">
@@ -695,6 +699,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+            <Property name="text" type="java.lang.String" value="Choisis !"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="txtCouleurJ3">
@@ -708,6 +713,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+            <Property name="text" type="java.lang.String" value="Choisis !"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="txtCouleurJ4">
@@ -721,6 +727,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+            <Property name="text" type="java.lang.String" value="Choisis !"/>
           </Properties>
         </Component>
       </SubComponents>
