@@ -17,114 +17,118 @@ public class CelluleGraphique extends JButton{
     
     Cellule celluleAssociee;
     
+    ImageIcon  angle0vide = new javax.swing.ImageIcon(getClass().getResource("/images/angle0vide.png"));
+//    ImageIcon  angle0rouge = new javax.swing.ImageIcon(getClass().getResource("/images/angle0rouge.png"));
+//    ImageIcon  angle0bleu = new javax.swing.ImageIcon(getClass().getResource("/images/angle0bleu.png"));
+//    ImageIcon  angle0jaune = new javax.swing.ImageIcon(getClass().getResource("/images/angle0jaune.png"));
+//    ImageIcon  angle0vert = new javax.swing.ImageIcon(getClass().getResource("/images/angle0vert.png"));
+//    ImageIcon  angle0biere = new javax.swing.ImageIcon(getClass().getResource("/images/angle0biere.png"));
+//    ImageIcon  angle0pet = new javax.swing.ImageIcon(getClass().getResource("/images/angle0pet.png"));
+//    ImageIcon  angle0cookie = new javax.swing.ImageIcon(getClass().getResource("/images/angle0cookie.png"));
+//    ImageIcon  angle0verre = new javax.swing.ImageIcon(getClass().getResource("/images/angle0verre.png"));
+    ImageIcon  angle1vide = new javax.swing.ImageIcon(getClass().getResource("/images/angle1vide.png"));
+//    ImageIcon  angle1rouge = new javax.swing.ImageIcon(getClass().getResource("/images/angle1rouge.png"));
+//    ImageIcon  angle1bleu = new javax.swing.ImageIcon(getClass().getResource("/images/angle1bleu.png"));
+//    ImageIcon  angle1jaune = new javax.swing.ImageIcon(getClass().getResource("/images/angle1jaune.png"));
+//    ImageIcon  angle1vert = new javax.swing.ImageIcon(getClass().getResource("/images/angle1vert.png"));
+//    ImageIcon  angle1biere = new javax.swing.ImageIcon(getClass().getResource("/images/angle1biere.png"));
+//    ImageIcon  angle1pet = new javax.swing.ImageIcon(getClass().getResource("/images/angle1pet.png"));
+//    ImageIcon  angle1cookie = new javax.swing.ImageIcon(getClass().getResource("/images/angle1cookie.png"));
+//    ImageIcon  angle1verre = new javax.swing.ImageIcon(getClass().getResource("/images/angle1verre.png"));
+    ImageIcon  angle2vide = new javax.swing.ImageIcon(getClass().getResource("/images/angle2vide.png"));
+//    ImageIcon  angle2rouge = new javax.swing.ImageIcon(getClass().getResource("/images/angle2rouge.png"));
+//    ImageIcon  angle2bleu = new javax.swing.ImageIcon(getClass().getResource("/images/angle2bleu.png"));
+//    ImageIcon  angle2jaune = new javax.swing.ImageIcon(getClass().getResource("/images/angle2jaune.png"));
+//    ImageIcon  angle2vert = new javax.swing.ImageIcon(getClass().getResource("/images/angle2vert.png"));
+//    ImageIcon  angle2biere = new javax.swing.ImageIcon(getClass().getResource("/images/angle2biere.png"));
+//    ImageIcon  angle2pet = new javax.swing.ImageIcon(getClass().getResource("/images/angle2pet.png"));
+//    ImageIcon  angle2cookie = new javax.swing.ImageIcon(getClass().getResource("/images/angle2cookie.png"));
+//    ImageIcon  angle2verre = new javax.swing.ImageIcon(getClass().getResource("/images/angle2verre.png"));
+    ImageIcon  angle3vide = new javax.swing.ImageIcon(getClass().getResource("/images/angle3vide.png"));
+//    ImageIcon  angle3rouge = new javax.swing.ImageIcon(getClass().getResource("/images/angle3rouge.png"));
+//    ImageIcon  angle3bleu = new javax.swing.ImageIcon(getClass().getResource("/images/angle3bleu.png"));
+//    ImageIcon  angle3jaune = new javax.swing.ImageIcon(getClass().getResource("/images/angle3jaune.png"));
+//    ImageIcon  angle3vert = new javax.swing.ImageIcon(getClass().getResource("/images/angle3vert.png"));
+//    ImageIcon  angle3biere = new javax.swing.ImageIcon(getClass().getResource("/images/angle3biere.png"));
+//    ImageIcon  angle3pet = new javax.swing.ImageIcon(getClass().getResource("/images/angle3pet.png"));
+//    ImageIcon  angle3cookie = new javax.swing.ImageIcon(getClass().getResource("/images/angle3cookie.png"));
+//    ImageIcon  angle3verre = new javax.swing.ImageIcon(getClass().getResource("/images/angle3verre.png"));
+    ImageIcon  t0vide = new javax.swing.ImageIcon(getClass().getResource("/images/t0vide.png"));
+//    ImageIcon  t0rouge = new javax.swing.ImageIcon(getClass().getResource("/images/t0rouge.png"));
+//    ImageIcon  t0bleu = new javax.swing.ImageIcon(getClass().getResource("/images/t0bleu.png"));
+//    ImageIcon  t0jaune = new javax.swing.ImageIcon(getClass().getResource("/images/t0jaune.png"));
+//    ImageIcon  t0vert = new javax.swing.ImageIcon(getClass().getResource("/images/t0vert.png"));
+//    ImageIcon  t0biere = new javax.swing.ImageIcon(getClass().getResource("/images/t0biere.png"));
+//    ImageIcon  t0pet = new javax.swing.ImageIcon(getClass().getResource("/images/t0pet.png"));
+//    ImageIcon  t0cookie = new javax.swing.ImageIcon(getClass().getResource("/images/t0cookie.png"));
+//    ImageIcon  t0verre = new javax.swing.ImageIcon(getClass().getResource("/images/t0verre.png"));
+    ImageIcon  t1vide = new javax.swing.ImageIcon(getClass().getResource("/images/t1vide.png"));
+//    ImageIcon  t1rouge = new javax.swing.ImageIcon(getClass().getResource("/images/t1rouge.png"));
+//    ImageIcon  t1bleu = new javax.swing.ImageIcon(getClass().getResource("/images/t1bleu.png"));
+//    ImageIcon  t1jaune = new javax.swing.ImageIcon(getClass().getResource("/images/t1jaune.png"));
+//    ImageIcon  t1vert = new javax.swing.ImageIcon(getClass().getResource("/images/t1vert.png"));
+//    ImageIcon  t1biere = new javax.swing.ImageIcon(getClass().getResource("/images/t1biere.png"));
+//    ImageIcon  t1pet = new javax.swing.ImageIcon(getClass().getResource("/images/t1pet.png"));
+//    ImageIcon  t1cookie = new javax.swing.ImageIcon(getClass().getResource("/images/t1cookie.png"));
+//    ImageIcon  t1verre = new javax.swing.ImageIcon(getClass().getResource("/images/t1verre.png"));
+    ImageIcon  t2vide = new javax.swing.ImageIcon(getClass().getResource("/images/t2vide.png"));
+//    ImageIcon  t2rouge = new javax.swing.ImageIcon(getClass().getResource("/images/t2rouge.png"));
+//    ImageIcon  t2bleu = new javax.swing.ImageIcon(getClass().getResource("/images/t2bleu.png"));
+//    ImageIcon  t2jaune = new javax.swing.ImageIcon(getClass().getResource("/images/t2jaune.png"));
+//    ImageIcon  t2vert = new javax.swing.ImageIcon(getClass().getResource("/images/t2vert.png"));
+//    ImageIcon  tbiere = new javax.swing.ImageIcon(getClass().getResource("/images/tbiere.png"));
+//    ImageIcon  t20pet = new javax.swing.ImageIcon(getClass().getResource("/images/t20pet.png"));
+//    ImageIcon  t2cookie = new javax.swing.ImageIcon(getClass().getResource("/images/t2cookie.png"));
+//    ImageIcon  t2verre = new javax.swing.ImageIcon(getClass().getResource("/images/t2verre.png"));
+    ImageIcon  t3vide = new javax.swing.ImageIcon(getClass().getResource("/images/t3vide.png"));
+//    ImageIcon  t3rouge = new javax.swing.ImageIcon(getClass().getResource("/images/t3rouge.png"));
+//    ImageIcon  t3bleu = new javax.swing.ImageIcon(getClass().getResource("/images/t3bleu.png"));
+//    ImageIcon  t3jaune = new javax.swing.ImageIcon(getClass().getResource("/images/t3jaune.png"));
+//    ImageIcon  t3vert = new javax.swing.ImageIcon(getClass().getResource("/images/t3vert.png"));
+//    ImageIcon  t3biere = new javax.swing.ImageIcon(getClass().getResource("/images/t3biere.png"));
+//    ImageIcon  t3pet = new javax.swing.ImageIcon(getClass().getResource("/images/t3pet.png"));
+//    ImageIcon  t3cookie = new javax.swing.ImageIcon(getClass().getResource("/images/t3cookie.png"));
+//    ImageIcon  t3verre = new javax.swing.ImageIcon(getClass().getResource("/images/t3verre.png"));
+    ImageIcon  ligne0vide = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0vide.png"));
+//    ImageIcon  ligne0rouge = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0rouge.png"));
+//    ImageIcon  ligne0bleu = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0bleu.png"));
+//    ImageIcon  ligne0jaune = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0jaune.png"));
+//    ImageIcon  ligne0vert = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0vert.png"));
+//    ImageIcon  ligne0biere = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0biere.png"));
+//    ImageIcon  ligne0pet = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0pet.png"));
+//    ImageIcon  ligne0cookie = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0cookie.png"));
+//    ImageIcon  ligne0verre = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0verre.png"));
+    ImageIcon  ligne1vide = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1vide.png"));
+//    ImageIcon  ligne1rouge = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1rouge.png"));
+//    ImageIcon  ligne1bleu = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1bleu.png"));
+//    ImageIcon  ligne1jaune = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1jaune.png"));
+//    ImageIcon  ligne1vert = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1vert.png"));
+//    ImageIcon  ligne1biere = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1biere.png"));
+//    ImageIcon  ligne1pet = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1pet.png"));
+//    ImageIcon  ligne1cookie = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1cookie.png"));
+//    ImageIcon  ligne1verre = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1verre.png"));
+    ImageIcon  croixvide = new javax.swing.ImageIcon(getClass().getResource("/images/croixvide.png"));
+//    ImageIcon  croixrouge = new javax.swing.ImageIcon(getClass().getResource("/images/croixrouge.png"));
+//    ImageIcon  croixbleu = new javax.swing.ImageIcon(getClass().getResource("/images/croixbleu.png"));
+//    ImageIcon  croixjaune = new javax.swing.ImageIcon(getClass().getResource("/images/croixjaune.png"));
+//    ImageIcon  croixvert = new javax.swing.ImageIcon(getClass().getResource("/images/croixvert.png"));
+//    ImageIcon  croixbiere = new javax.swing.ImageIcon(getClass().getResource("/images/croixbiere.png"));
+//    ImageIcon  croixpet = new javax.swing.ImageIcon(getClass().getResource("/images/croixpet.png"));
+//    ImageIcon  croixcookie = new javax.swing.ImageIcon(getClass().getResource("/images/croixcookie.png"));
+//    ImageIcon  croixverre = new javax.swing.ImageIcon(getClass().getResource("/images/croixverre.png"));
+    
+    
     public CelluleGraphique(Cellule uneCellule){
         celluleAssociee = uneCellule;
     }
     
-    ImageIcon  angle0vide = new javax.swing.ImageIcon(getClass().getResource("/images/angle0vide.jpg"));
-    ImageIcon  angle0rouge = new javax.swing.ImageIcon(getClass().getResource("/images/angle0rouge.jpg"));
-    ImageIcon  angle0bleu = new javax.swing.ImageIcon(getClass().getResource("/images/angle0bleu.jpg"));
-    ImageIcon  angle0jaune = new javax.swing.ImageIcon(getClass().getResource("/images/angle0jaune.jpg"));
-    ImageIcon  angle0vert = new javax.swing.ImageIcon(getClass().getResource("/images/angle0vert.jpg"));
-    ImageIcon  angle0biere = new javax.swing.ImageIcon(getClass().getResource("/images/angle0biere.jpg"));
-    ImageIcon  angle0pet = new javax.swing.ImageIcon(getClass().getResource("/images/angle0pet.jpg"));
-    ImageIcon  angle0cookie = new javax.swing.ImageIcon(getClass().getResource("/images/angle0cookie.jpg"));
-    ImageIcon  angle0verre = new javax.swing.ImageIcon(getClass().getResource("/images/angle0verre.jpg"));
-    ImageIcon  angle1vide = new javax.swing.ImageIcon(getClass().getResource("/images/angle1vide.jpg"));
-    ImageIcon  angle1rouge = new javax.swing.ImageIcon(getClass().getResource("/images/angle1rouge.jpg"));
-    ImageIcon  angle1bleu = new javax.swing.ImageIcon(getClass().getResource("/images/angle1bleu.jpg"));
-    ImageIcon  angle1jaune = new javax.swing.ImageIcon(getClass().getResource("/images/angle1jaune.jpg"));
-    ImageIcon  angle1vert = new javax.swing.ImageIcon(getClass().getResource("/images/angle1vert.jpg"));
-    ImageIcon  angle1biere = new javax.swing.ImageIcon(getClass().getResource("/images/angle1biere.jpg"));
-    ImageIcon  angle1pet = new javax.swing.ImageIcon(getClass().getResource("/images/angle1pet.jpg"));
-    ImageIcon  angle1cookie = new javax.swing.ImageIcon(getClass().getResource("/images/angle1cookie.jpg"));
-    ImageIcon  angle1verre = new javax.swing.ImageIcon(getClass().getResource("/images/angle1verre.jpg"));
-    ImageIcon  angle2vide = new javax.swing.ImageIcon(getClass().getResource("/images/angle2vide.jpg"));
-    ImageIcon  angle2rouge = new javax.swing.ImageIcon(getClass().getResource("/images/angle2rouge.jpg"));
-    ImageIcon  angle2bleu = new javax.swing.ImageIcon(getClass().getResource("/images/angle2bleu.jpg"));
-    ImageIcon  angle2jaune = new javax.swing.ImageIcon(getClass().getResource("/images/angle2jaune.jpg"));
-    ImageIcon  angle2vert = new javax.swing.ImageIcon(getClass().getResource("/images/angle2vert.jpg"));
-    ImageIcon  angle2biere = new javax.swing.ImageIcon(getClass().getResource("/images/angle2biere.jpg"));
-    ImageIcon  angle2pet = new javax.swing.ImageIcon(getClass().getResource("/images/angle2pet.jpg"));
-    ImageIcon  angle2cookie = new javax.swing.ImageIcon(getClass().getResource("/images/angle2cookie.jpg"));
-    ImageIcon  angle2verre = new javax.swing.ImageIcon(getClass().getResource("/images/angle2verre.jpg"));
-    ImageIcon  angle3vide = new javax.swing.ImageIcon(getClass().getResource("/images/angle3vide.jpg"));
-    ImageIcon  angle3rouge = new javax.swing.ImageIcon(getClass().getResource("/images/angle3rouge.jpg"));
-    ImageIcon  angle3bleu = new javax.swing.ImageIcon(getClass().getResource("/images/angle3bleu.jpg"));
-    ImageIcon  angle3jaune = new javax.swing.ImageIcon(getClass().getResource("/images/angle3jaune.jpg"));
-    ImageIcon  angle3vert = new javax.swing.ImageIcon(getClass().getResource("/images/angle3vert.jpg"));
-    ImageIcon  angle3biere = new javax.swing.ImageIcon(getClass().getResource("/images/angle3biere.jpg"));
-    ImageIcon  angle3pet = new javax.swing.ImageIcon(getClass().getResource("/images/angle3pet.jpg"));
-    ImageIcon  angle3cookie = new javax.swing.ImageIcon(getClass().getResource("/images/angle3cookie.jpg"));
-    ImageIcon  angle3verre = new javax.swing.ImageIcon(getClass().getResource("/images/angle3verre.jpg"));
-    ImageIcon  t0vide = new javax.swing.ImageIcon(getClass().getResource("/images/t0vide.jpg"));
-    ImageIcon  t0rouge = new javax.swing.ImageIcon(getClass().getResource("/images/t0rouge.jpg"));
-    ImageIcon  t0bleu = new javax.swing.ImageIcon(getClass().getResource("/images/t0bleu.jpg"));
-    ImageIcon  t0jaune = new javax.swing.ImageIcon(getClass().getResource("/images/t0jaune.jpg"));
-    ImageIcon  t0vert = new javax.swing.ImageIcon(getClass().getResource("/images/t0vert.jpg"));
-    ImageIcon  t0biere = new javax.swing.ImageIcon(getClass().getResource("/images/t0biere.jpg"));
-    ImageIcon  t0pet = new javax.swing.ImageIcon(getClass().getResource("/images/t0pet.jpg"));
-    ImageIcon  t0cookie = new javax.swing.ImageIcon(getClass().getResource("/images/t0cookie.jpg"));
-    ImageIcon  t0verre = new javax.swing.ImageIcon(getClass().getResource("/images/t0verre.jpg"));
-    ImageIcon  t1vide = new javax.swing.ImageIcon(getClass().getResource("/images/t1vide.jpg"));
-    ImageIcon  t1rouge = new javax.swing.ImageIcon(getClass().getResource("/images/t1rouge.jpg"));
-    ImageIcon  t1bleu = new javax.swing.ImageIcon(getClass().getResource("/images/t1bleu.jpg"));
-    ImageIcon  t1jaune = new javax.swing.ImageIcon(getClass().getResource("/images/t1jaune.jpg"));
-    ImageIcon  t1vert = new javax.swing.ImageIcon(getClass().getResource("/images/t1vert.jpg"));
-    ImageIcon  t1biere = new javax.swing.ImageIcon(getClass().getResource("/images/t1biere.jpg"));
-    ImageIcon  t1pet = new javax.swing.ImageIcon(getClass().getResource("/images/t1pet.jpg"));
-    ImageIcon  t1cookie = new javax.swing.ImageIcon(getClass().getResource("/images/t1cookie.jpg"));
-    ImageIcon  t1verre = new javax.swing.ImageIcon(getClass().getResource("/images/t1verre.jpg"));
-    ImageIcon  t2vide = new javax.swing.ImageIcon(getClass().getResource("/images/t2vide.jpg"));
-    ImageIcon  t2rouge = new javax.swing.ImageIcon(getClass().getResource("/images/t2rouge.jpg"));
-    ImageIcon  t2bleu = new javax.swing.ImageIcon(getClass().getResource("/images/t2bleu.jpg"));
-    ImageIcon  t2jaune = new javax.swing.ImageIcon(getClass().getResource("/images/t2jaune.jpg"));
-    ImageIcon  t2vert = new javax.swing.ImageIcon(getClass().getResource("/images/t2vert.jpg"));
-    ImageIcon  tbiere = new javax.swing.ImageIcon(getClass().getResource("/images/tbiere.jpg"));
-    ImageIcon  t20pet = new javax.swing.ImageIcon(getClass().getResource("/images/t20pet.jpg"));
-    ImageIcon  t2cookie = new javax.swing.ImageIcon(getClass().getResource("/images/t2cookie.jpg"));
-    ImageIcon  t2verre = new javax.swing.ImageIcon(getClass().getResource("/images/t2verre.jpg"));
-    ImageIcon  t3vide = new javax.swing.ImageIcon(getClass().getResource("/images/t3vide.jpg"));
-    ImageIcon  t3rouge = new javax.swing.ImageIcon(getClass().getResource("/images/t3rouge.jpg"));
-    ImageIcon  t3bleu = new javax.swing.ImageIcon(getClass().getResource("/images/t3bleu.jpg"));
-    ImageIcon  t3jaune = new javax.swing.ImageIcon(getClass().getResource("/images/t3jaune.jpg"));
-    ImageIcon  t3vert = new javax.swing.ImageIcon(getClass().getResource("/images/t3vert.jpg"));
-    ImageIcon  t3biere = new javax.swing.ImageIcon(getClass().getResource("/images/t3biere.jpg"));
-    ImageIcon  t3pet = new javax.swing.ImageIcon(getClass().getResource("/images/t3pet.jpg"));
-    ImageIcon  t3cookie = new javax.swing.ImageIcon(getClass().getResource("/images/t3cookie.jpg"));
-    ImageIcon  t3verre = new javax.swing.ImageIcon(getClass().getResource("/images/t3verre.jpg"));
-    ImageIcon  ligne0vide = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0vide.jpg"));
-    ImageIcon  ligne0rouge = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0rouge.jpg"));
-    ImageIcon  ligne0bleu = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0bleu.jpg"));
-    ImageIcon  ligne0jaune = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0jaune.jpg"));
-    ImageIcon  ligne0vert = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0vert.jpg"));
-    ImageIcon  ligne0biere = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0biere.jpg"));
-    ImageIcon  ligne0pet = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0pet.jpg"));
-    ImageIcon  ligne0cookie = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0cookie.jpg"));
-    ImageIcon  ligne0verre = new javax.swing.ImageIcon(getClass().getResource("/images/ligne0verre.jpg"));
-    ImageIcon  ligne1vide = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1vide.jpg"));
-    ImageIcon  ligne1rouge = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1rouge.jpg"));
-    ImageIcon  ligne1bleu = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1bleu.jpg"));
-    ImageIcon  ligne1jaune = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1jaune.jpg"));
-    ImageIcon  ligne1vert = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1vert.jpg"));
-    ImageIcon  ligne1biere = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1biere.jpg"));
-    ImageIcon  ligne1pet = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1pet.jpg"));
-    ImageIcon  ligne1cookie = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1cookie.jpg"));
-    ImageIcon  ligne1verre = new javax.swing.ImageIcon(getClass().getResource("/images/ligne1verre.jpg"));
-    ImageIcon  croixvide = new javax.swing.ImageIcon(getClass().getResource("/images/croixvide.jpg"));
-    ImageIcon  croixrouge = new javax.swing.ImageIcon(getClass().getResource("/images/croixrouge.jpg"));
-    ImageIcon  croixbleu = new javax.swing.ImageIcon(getClass().getResource("/images/croixbleu.jpg"));
-    ImageIcon  croixjaune = new javax.swing.ImageIcon(getClass().getResource("/images/croixjaune.jpg"));
-    ImageIcon  croixvert = new javax.swing.ImageIcon(getClass().getResource("/images/croixvert.jpg"));
-    ImageIcon  croixbiere = new javax.swing.ImageIcon(getClass().getResource("/images/croixbiere.jpg"));
-    ImageIcon  croixpet = new javax.swing.ImageIcon(getClass().getResource("/images/croixpet.jpg"));
-    ImageIcon  croixcookie = new javax.swing.ImageIcon(getClass().getResource("/images/croixcookie.jpg"));
-    ImageIcon  croixverre = new javax.swing.ImageIcon(getClass().getResource("/images/croixverre.jpg"));
     
     
     
     @Override // cellule de base au début de la partie 
     public void paintComponent(Graphics G) {
+        System.out.print(celluleAssociee.type);
+        super.paintComponent(G);
         if(celluleAssociee.pionCourant == null && celluleAssociee.pionCourant == null){ // Cellule vide, pas de joueur, pas d'objet
             switch (celluleAssociee.type){
                 case 0 : // angle
@@ -133,28 +137,28 @@ public class CelluleGraphique extends JButton{
                             setIcon(angle0vide);
                             break;
                         case 1:
-                            //
+                            setIcon(angle1vide);
                             break;
                         case 2:
-                            //
+                            setIcon(angle2vide);
                             break;
                         case 3:
-                            //
+                            setIcon(angle3vide);
                             break; 
                     }
                 case 1: // 't'
                     switch(celluleAssociee.sens){
                         case 0:
-                            setIcon(angle0vide);
+                            setIcon(t0vide);
                             break;
                         case 1:
-                            //
+                            setIcon(t1vide);
                             break;
                         case 2:
-                            //
+                            setIcon(t2vide);
                             break;
                         case 3:
-                            //
+                            setIcon(t3vide);
                             break; 
                     }
                 case 2 : // ligne
@@ -163,7 +167,7 @@ public class CelluleGraphique extends JButton{
                             setIcon(ligne0vide);
                             break;
                         case 1:
-                            //
+                            setIcon(ligne1vide);
                             break;
                     }
                 case 3:// croix
@@ -355,7 +359,7 @@ public class CelluleGraphique extends JButton{
                 case 0 : // angle
                     switch(celluleAssociee.sens){ // les 4 sens 
                         case 0:
-                            setIcon(angle0rouge);
+                            //
                             break;
                         case 1:
                             //
@@ -400,7 +404,7 @@ public class CelluleGraphique extends JButton{
                 case 0 : // angle
                     switch(celluleAssociee.sens){ // les 4 sens 
                         case 0:
-                            setIcon(angle0bleu);
+                            //
                             break;
                         case 1:
                             //
@@ -445,7 +449,7 @@ public class CelluleGraphique extends JButton{
                 case 0 : // angle
                     switch(celluleAssociee.sens){ // les 4 sens 
                         case 0:
-                            setIcon(angle0vert);
+                            //                            
                             break;
                         case 1:
                             //
@@ -490,7 +494,7 @@ public class CelluleGraphique extends JButton{
                 case 0 : // angle
                     switch(celluleAssociee.sens){ // les 4 sens 
                         case 0:
-                            setIcon(angle0jaune);
+                            //
                             break;
                         case 1:
                             //
