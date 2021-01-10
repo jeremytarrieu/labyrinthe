@@ -5,10 +5,12 @@
  */
 package labrinthe;
 
+import java.util.Random;
+
 public class Affichage extends javax.swing.JFrame {
 
     Joueur joueurCourant;
-    Grille grilleJeu = new Grille(); // grille de 
+    Grille grilleJeu = new Grille(); // grille de Jeu 
     Joueur[] listeJoueurs = new Joueur[4]; // tableau des scores de la partie en cours
     boolean tourDeJeu = false;/* boolean qui nous informe si le joeuur courant 
     doit deplacer son pion ou faire glisser une rangée : 
@@ -677,37 +679,32 @@ public class Affichage extends javax.swing.JFrame {
             .addGroup(PJeuLayout.createSequentialGroup()
                 .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PJeuLayout.createSequentialGroup()
-                        .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PJeuLayout.createSequentialGroup()
-                                .addGap(200, 200, 200)
-                                .addComponent(btnSlide10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(100, 100, 100)
-                                .addComponent(btnSlide11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(100, 100, 100)
-                                .addComponent(btnSlide12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PJeuLayout.createSequentialGroup()
-                                .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnSlide6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnSlide5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnSlide4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, 0)
-                                .addComponent(PCellules, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSlide8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSlide7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(PJeuLayout.createSequentialGroup()
                         .addGap(200, 200, 200)
-                        .addComponent(btnSlide1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSlide10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(100, 100, 100)
-                        .addComponent(btnSlide2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSlide11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(100, 100, 100)
-                        .addComponent(btnSlide3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PJeuLayout.createSequentialGroup()
-                    .addContainerGap(800, Short.MAX_VALUE)
+                        .addComponent(btnSlide12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PJeuLayout.createSequentialGroup()
+                        .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnSlide6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSlide5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSlide4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, 0)
+                        .addComponent(PCellules, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, 0)
+                .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSlide9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
+                    .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnSlide8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSlide7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(PJeuLayout.createSequentialGroup()
+                .addGap(200, 200, 200)
+                .addComponent(btnSlide1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(101, 101, 101)
+                .addComponent(btnSlide2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(99, 99, 99)
+                .addComponent(btnSlide3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         PJeuLayout.setVerticalGroup(
             PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -721,8 +718,10 @@ public class Affichage extends javax.swing.JFrame {
                         .addGap(100, 100, 100)
                         .addComponent(btnSlide4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PJeuLayout.createSequentialGroup()
+                        .addComponent(btnSlide9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(100, 100, 100)
                         .addComponent(btnSlide8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(300, 300, 300)
+                        .addGap(100, 100, 100)
                         .addComponent(btnSlide7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(250, 250, 250))
             .addGroup(PJeuLayout.createSequentialGroup()
@@ -732,17 +731,16 @@ public class Affichage extends javax.swing.JFrame {
                     .addComponent(btnSlide12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(PCellules, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSlide2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSlide3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSlide1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48))
-            .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PJeuLayout.createSequentialGroup()
-                    .addGap(410, 410, 410)
-                    .addComponent(btnSlide9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(440, Short.MAX_VALUE)))
+                    .addGroup(PJeuLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnSlide3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48))
+                    .addGroup(PJeuLayout.createSequentialGroup()
+                        .addGroup(PJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnSlide2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSlide1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         getContentPane().add(PJeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 900, 900));
@@ -852,13 +850,13 @@ public class Affichage extends javax.swing.JFrame {
         elles sont nulles dans le cas ou il y a moins de joueurs que 4
          */
         PMenuNbJoueurs.setVisible(false);
-            PJeu.setVisible(true);
+        PJeu.setVisible(true);
         boolean verifCouleurDiff = true;
         for (int i = 0; i < 4; i++) {
             if (listeJoueurs[i] != null) {
                 for (int j = 0; j < 4; j++) {
-                    if (listeJoueurs[j] != null) {
-                        if ( listeJoueurs[i].couleur == listeJoueurs[j].couleur && listeJoueurs[i].couleur != null) {
+                    if (listeJoueurs[j] != null && listeJoueurs[i] != listeJoueurs[j]) {
+                        if (listeJoueurs[i].couleur == listeJoueurs[j].couleur && listeJoueurs[i].couleur != null) {
                             verifCouleurDiff = false;
                         }
                     }
@@ -866,9 +864,15 @@ public class Affichage extends javax.swing.JFrame {
             }
         }
         if (verifCouleurDiff == true) {
-            PMenuNbJoueurs.setVisible(false);
-            PJeu.setVisible(true);
+            for (int i = 0; i < 4; i++) {
+                if (listeJoueurs[i] != null) {
+                    listeJoueurs[i].nom = nomJoueur1.getText();
+                }
+            }
         }
+        initialiserPartie();
+        PMenuNbJoueurs.setVisible(false);
+        PJeu.setVisible(true);
     }//GEN-LAST:event_validerNomCouleurActionPerformed
 
     private void btnBleuJ4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBleuJ4ActionPerformed
@@ -1185,7 +1189,7 @@ public class Affichage extends javax.swing.JFrame {
         int y = 0;
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 7; j++) {
-                if (grilleJeu.cellule[i][j].pionCourant == joueurCourant) {
+                if (grilleJeu.cellule[i][j] != null && grilleJeu.cellule[i][j].pionCourant == joueurCourant) {
                     x = i;
                     y = j;
                 }
@@ -1250,11 +1254,10 @@ public class Affichage extends javax.swing.JFrame {
                 } else if (joueurCourant == listeJoueurs[3]) {
                     joueurCourant = listeJoueurs[0];
                 }
-
         }
     }
-    
-    public void initialiserPartie(){
+
+    public void initialiserPartie() {
         /* on place les cellules immobiles
          des angles dans les 4 coins et dans les cellules  : 
         (0,2) (0,4)
@@ -1262,14 +1265,14 @@ public class Affichage extends javax.swing.JFrame {
         (4,0) (4,2) (4,4) (4,6)
         (6,2) (6,4) 
         des 'T' pointant vers le centre pour ceux sur les bords 
-        */
-        
+         */
+
         //placement des angles
         grilleJeu.cellule[0][0].angle(0);
         grilleJeu.cellule[6][0].angle(1);
         grilleJeu.cellule[6][6].angle(2);
         grilleJeu.cellule[0][6].angle(3);
-        
+
         //placement des bords
         grilleJeu.cellule[0][2].t(0);
         grilleJeu.cellule[0][4].t(0);
@@ -1279,20 +1282,63 @@ public class Affichage extends javax.swing.JFrame {
         grilleJeu.cellule[4][6].t(2);
         grilleJeu.cellule[6][2].t(3);
         grilleJeu.cellule[6][4].t(3);
-        
+
         //placement des cellules internes
         grilleJeu.cellule[2][2].t(0);
         grilleJeu.cellule[4][2].t(1);
         grilleJeu.cellule[2][4].t(2);
         grilleJeu.cellule[4][4].t(3);
         
+        //on créée un tableau contenant toutes les autres cases à placer 
+        Cellule tabCellule[] = new Cellule[34];
+
+        for (int i = 0; i < 34; i++) {  // on associe cellules en bon nombre et forme 
+            if (i < 15) {
+                tabCellule[i] = new Cellule(0, i); //15 angles
+            } else if (i > 14 && i < 19) {
+                tabCellule[i] = new Cellule(1, (i % 14)); // 4 't'
+            } else if (i > 18 && i < 32) {
+                tabCellule[i] = new Cellule(2, (i % 4)); //13 lignes
+            } else {
+                tabCellule[i] = new Cellule(3, 0); // 2 croix
+            }
+            System.out.print(tabCellule[i].type);
+        }
         
-        // placer le reste aléatoirement  à partir d'un tableau dans lequel on met tout le reste 
-        
-        
-        
-        
-        
+
+        //on mélange ce tableau 
+        //melangerTableau(tabCellule);
+
+        // on intègre les cases de ce tableau aux cellules vides de la grille;
+        int x = 0; // variable permettant de se déplacer dans tabCellules
+        while (x < 33) {
+            for (int i = 0; i < 7; i++) {
+                for (int j = 0; j < 7; j++) {
+                    if (grilleJeu.cellule[i][j].type == -1) {
+                        grilleJeu.cellule[i][j] = tabCellule[x];
+                        System.out.println(x);
+                        System.out.println(tabCellule[x].type);
+                        x++;
+                    }
+                }
+            }
+        }
+        grilleJeu.celluleExt = tabCellule[33]; // stock la cellule ext
+        PJeu.repaint();
+    }
+
+    public static Cellule[] melangerTableau(Cellule[] tab) {
+        // cette methode permet de mélanger la tableau des cellules afin que chaque 
+        Random rgen = new Random();  // Generateur de nombre aléatoire		
+
+        for (int i = 0; i < tab.length; i++) {
+            int randomPosition = rgen.nextInt(tab.length);
+            Cellule temp = tab[i];
+            tab[i] = tab[randomPosition];
+            tab[randomPosition] = temp;
+        }
+
+        return tab;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
